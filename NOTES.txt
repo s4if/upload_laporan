@@ -1,0 +1,2 @@
+ide:
+- Cari csv to sqlite table

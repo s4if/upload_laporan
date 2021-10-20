@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{baseUrl}}css/login.css">
+</head>
+<body>
+<body>
+    <div class="main">
+    
+    
+    <div class="container">
+<center>
+<div class="middle">
+      <div id="login">
+
+        <form action="{{baseUrl}}login{{folder}}" method="post">
+
+          <fieldset class="clearfix">
+
+            <p><span class="fa fa-user"></span><input type="text"  Placeholder="Username" name="username" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
+            <p><span class="fa fa-lock"></span><input type="password"  Placeholder="Password" name="password" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+            <p class="notice">{{error_msg}}</p>
+            
+             <div>
+                <span style="width:50%; text-align:right;  display: inline-block;"><input type="submit" value="Masuk"></span>
+            </div>
+
+          </fieldset>
+<div class="clearfix"></div>
+        </form>
+
+        <div class="clearfix"></div>
+
+      </div> <!-- end login -->
+      <div class="logo">
+          <img src="{{baseUrl}}img/logosmkit.png" class="logo-smk">
+          <div class="clearfix"></div>
+      </div>
+      
+      </div>
+</center>
+    </div>
+
+</div>
+</body>
+</html>
