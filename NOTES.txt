@@ -1,2 +1,4 @@
-ide:
-- Cari csv to sqlite table
+Install tambah folder:
+- cache
+- cache/twig
+- data

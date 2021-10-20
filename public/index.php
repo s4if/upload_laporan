@@ -29,7 +29,7 @@ $app->add(
 // Set view in Container
 $container->set('view', function() {
     return Twig::create('../views', [
-    	//'cache' => '../cache/twig',
+    	'cache' => '../cache/twig',
     ]);
 });
 
