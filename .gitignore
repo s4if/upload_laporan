@@ -2,8 +2,9 @@ composer.phar
 /vendor/
 composer.lock
 
-
+!/cache/
 /cache/*
+!/data/
 /data/*
 db.sqlite
 data_raw.*
