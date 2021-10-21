@@ -29,7 +29,8 @@ $app->add(
 // Set view in Container
 $container->set('view', function() {
     return Twig::create('../views', [
-    	'cache' => '../cache/twig',
+    	//pas deploy ini di uncomment
+    	//'cache' => '../cache/twig',
     ]);
 });
 
@@ -157,14 +158,6 @@ $app->get('/home[/{folder}]', function(Request $req, Response $res, $args){
 		'title' => $title
 	]);
 })->add($simpleAuth);
-
-$app->get('/twig/{name}', function (Request $req, Response $res, $args)
-{
-	$name = $args['name'];
-	return $this->get('view')->render($res, 'index.html', [
-        'name' => $name
-    ]);
-});
 
 $app->get('/hash/{pass}', function(Request $req, Response $res, $args){
 	$res->getBody()->write(password_hash($args['pass'], PASSWORD_BCRYPT));
