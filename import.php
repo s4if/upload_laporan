@@ -31,6 +31,7 @@ foreach ($records as $offset => $record) {
        'kelas' => $record['kelas']
 	))
 	->into("users");
+    echo $record['nama']."\n";
 
 	$insertId = $insertStatement->execute();
 }

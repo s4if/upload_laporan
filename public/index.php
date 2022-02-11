@@ -136,11 +136,14 @@ $app->get('/home[/{folder}]', function(Request $req, Response $res, $args){
 	$arrDir = array_diff(scandir('../data/', SCANDIR_SORT_NONE), array('..', '.'));
 	$arrLaporan = [];
 	foreach ($arrDir as $direktori) {
-		$alias = file_get_contents('../data/'.$direktori.'/alias.txt');
-		$arrLaporan[] = [
-			'direktori' => $direktori, 
-			'alias' => $alias
-		];
+        $kelas = $this->get('session')->kelas;
+	    if (file_exists('../data/'.$direktori.'/'.$kelas)) {
+		    $alias = file_get_contents('../data/'.$direktori.'/alias.txt');
+		    $arrLaporan[] = [
+			    'direktori' => $direktori, 
+			    'alias' => $alias
+		    ];
+        }
 	}
 	$title = "Home";
 	if (file_exists('../data/'.$args['folder'].'/alias.txt')) {
