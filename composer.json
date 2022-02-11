@@ -19,7 +19,8 @@
         "guzzlehttp/psr7": "^1.6",
         "http-interop/http-factory-guzzle": "^1.0",
         "slim/flash": "^0.4.0",
-        "league/csv": "^9.6"
+        "league/csv": "^9.6",
+        "slim/psr7": "^1.5"
     },
     "scripts": {
         "start": "php -S localhost:3000 -t public"
